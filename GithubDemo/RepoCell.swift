@@ -35,7 +35,7 @@ class RepoCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        
+        descriptionLabel.sizeToFit()
         // Set cell outlet 
     }
 

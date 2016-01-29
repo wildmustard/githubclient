@@ -35,7 +35,7 @@ class RepoResultsViewController: UIViewController, UITableViewDataSource, UITabl
         // Add SearchBar to the NavigationBar
         searchBar.sizeToFit()
         navigationItem.titleView = searchBar
-
+        
         // Perform the first search when the view controller first loads
         doSearch()
         
