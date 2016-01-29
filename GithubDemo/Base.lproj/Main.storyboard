@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="170" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8fz-xI-w49">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="170" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8fz-xI-w49">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -103,6 +103,12 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8fz-xI-w49" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="H5z-Vh-UmP"/>
+                            <constraint firstItem="8fz-xI-w49" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="W5Y-ao-nJo"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="8fz-xI-w49" secondAttribute="bottom" id="fuC-2a-Vzg"/>
+                            <constraint firstAttribute="trailing" secondItem="8fz-xI-w49" secondAttribute="trailing" id="uae-wZ-pxF"/>
+                        </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" id="x5q-EH-pP8"/>
