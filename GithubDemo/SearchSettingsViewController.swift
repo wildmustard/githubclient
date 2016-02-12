@@ -9,11 +9,19 @@
 import UIKit
 
 class SearchSettingsViewController: UIViewController {
+    
+    // Variables
+    
+    var settings: GithubRepoSearchSettings?
+    weak var delegate: SettingsPresentingViewControllerDelegate?
+    
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        let settingsToSave = settings
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,14 +30,25 @@ class SearchSettingsViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
+    @IBAction func onCancel(sender: AnyObject) {
+        self.delegate?.didCancelSettings()
+    }
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
+    @IBAction func onSave(sender: AnyObject) {
+        self.delegate?.didSaveSettings(settings!)
+    }
+
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
 
 }
+
+protocol SettingsPresentingViewControllerDelegate: class {
+    func didSaveSettings(settings: GithubRepoSearchSettings)
+    func didCancelSettings()
+}
+
